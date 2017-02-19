@@ -2,7 +2,7 @@
 
 首先来看Charles官网对HTTPS代理的描述：
 
-Charles can be used as a man-in-the-middle HTTPS proxy, enabling you to view in plain text the communication between web browser and SSL web server.`
+`Charles can be used as a man-in-the-middle HTTPS proxy, enabling you to view in plain text the communication between web browser and SSL web server.`
 
 `Charles does this by becoming a man-in-the-middle. Instead of your browser seeing the server’s certificate, Charles dynamically generates a certificate for the server and signs it with its own root certificate (the Charles CA Certificate). Charles receives the server’s certificate, while your browser receives Charles’s certificate. Therefore you will see a security warning, indicating that the root authority is not trusted. If you add the Charles CA Certificate to your trusted certificates you will no longer see any warnings – see below for how to do this.
 `
