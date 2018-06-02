@@ -14,7 +14,7 @@
   - UI
     - View绘制原则/测量原则
     - 事件派发机制
-    - ListView/RecyclerView缓存机制
+    - [ListView](https://blog.csdn.net/zwjemperor/article/details/52564098)/RecyclerView缓存机制
     - Choreographer/Vsync
   - 深入机制
     - App安装流程
@@ -29,12 +29,13 @@
     - 布局优化：过度绘制
     - ANR
     - 性能监控
-    - APK瘦身
+    - [APK瘦身](https://blog.csdn.net/zwjemperor/article/details/52541264)
   - 容器化
     - 模块化
     - 插件化
       - 类加载机制/multidex
       - 四大组件启动过程
+      - [InstantRun原理](https://github.com/rushgit/InstantRun)
     - hybrid
       - ReactNative/Weex
       - 免安装
@@ -49,7 +50,10 @@
   - 安全
     - 数字签名/加密算法
     - 安全编码
-    - 混淆/反编译/加固
+    - [混淆](security/关于proguard，你需要知道的全部.md)
+    - 反编译/加固
+  - Android版本新特性
+    - [Android N分屏适配](https://blog.csdn.net/zwjemperor/article/details/52337106)
   - 其它
     - JNI原理
     - Dalvik/ART
@@ -76,8 +80,8 @@
 - 计算机基础
   - 网络基础
     - TCP/IP：握手/挥手/拥塞控制/流量控制
-    - HTTP：请求/响应/缓存 [你要了解的HTTP基础知识](blog/http/你要了解的HTTP基础知识.md)
-    - HTTPS原理
+    - [HTTP：请求/响应/缓存](http/你要了解的HTTP基础知识.md)
+    - [HTTPS原理](http/关于HTTPS，你需要知道的全部.md)
     - WebSocket
   - 操作系统
     - 进程与线程
