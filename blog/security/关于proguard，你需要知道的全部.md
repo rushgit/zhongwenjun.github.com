@@ -1,3 +1,5 @@
+# 关于proguard，你需要知道的全部
+
 ![proguard流程](http://upload-images.jianshu.io/upload_images/2438937-204ad4d3ecac7c95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # proguard分为4个步骤：

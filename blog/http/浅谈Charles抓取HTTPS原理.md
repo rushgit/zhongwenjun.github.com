@@ -1,3 +1,5 @@
+# 浅谈Charles抓取HTTPS原理
+
 在[关于HTTPS，你需要知道的全部](./关于HTTPS，你需要知道的全部.md)中，分析了HTTPS的安全通信过程，知道了HTTPS可以有效防止中间人攻击。但用过抓包工具的人都知道，比如Charles，Fiddler是可以抓取HTTPS请求并解密的，它们是如何做到的呢？
 
 首先来看Charles官网对HTTPS代理的描述：
@@ -7,7 +9,7 @@
 `Charles does this by becoming a man-in-the-middle. Instead of your browser seeing the server’s certificate, Charles dynamically generates a certificate for the server and signs it with its own root certificate (the Charles CA Certificate). Charles receives the server’s certificate, while your browser receives Charles’s certificate. Therefore you will see a security warning, indicating that the root authority is not trusted. If you add the Charles CA Certificate to your trusted certificates you will no longer see any warnings – see below for how to do this.
 `
 
-Charles作为一个[“中间人代理”](https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB)，当浏览器和服务器通信时，Charles接收服务器的证书，但动态生成一张证书发送给浏览器，也就是说Charles作为中间代理在浏览器和服务器之间通信，所以通信的数据可以被Charles拦截并解密。由于Charles更改了证书，浏览器校验不通过会给出安全警告，必须安装Charles的证书后才能进行正常访问。
+Charles作为一个[中间人代理](https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB)，当浏览器和服务器通信时，Charles接收服务器的证书，但动态生成一张证书发送给浏览器，也就是说Charles作为中间代理在浏览器和服务器之间通信，所以通信的数据可以被Charles拦截并解密。由于Charles更改了证书，浏览器校验不通过会给出安全警告，必须安装Charles的证书后才能进行正常访问。
 
 下面来看具体的流程：
 
@@ -32,3 +34,8 @@ Charles作为一个[“中间人代理”](https://zh.wikipedia.org/wiki/%E4%B8%
 9. 至此，连接建立，Charles拿到了 服务器证书的公钥 和 客户端与服务器协商的对称密钥，之后就可以解密或者修改加密的报文了。
 
 HTTPS抓包的原理还是挺简单的，简单来说，就是Charles作为**“中间人代理”**，拿到了 **服务器证书公钥** 和 **HTTPS连接的对称密钥**，前提是客户端选择信任并安装Charles的CA证书，否则客户端就会“报警”并中止连接。这样看来，HTTPS还是很安全的。
+
+
+
+* [你要了解的HTTP基础知识](./你要了解的HTTP基础知识.md)
+* [关于HTTPS，你需要知道的全部](./关于HTTPS，你需要知道的全部.md)
