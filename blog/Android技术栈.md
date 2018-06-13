@@ -5,7 +5,7 @@
     - BroadcastReceiver注册方式/优先级
     - ContentProvider安装过程
   - 进程通信
-    - Binder机制
+    - [Binder机制](android/binder.md)
     - AMS/PMS/WMS
     - 进程保活/优先级
   - 线程通信
