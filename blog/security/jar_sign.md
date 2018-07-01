@@ -2,7 +2,7 @@
 
 <br>
 
-在[APK签名机制原理详解](./APK签名机制原理详解.md)中我们已经了解了APK签名和校验的基本过程，这一篇我们来分析JAR签名机制。JAR签名对对jar包进行签名的一种机制，由于jar包apk本质上都是zip包，所以可以应用到对apk的签名。
+在[APK签名机制原理详解](./sign_mechanism.md)中我们已经了解了APK签名和校验的基本过程，这一篇我们来分析JAR签名机制。JAR签名对对jar包进行签名的一种机制，由于jar包apk本质上都是zip包，所以可以应用到对apk的签名。
 
 # 1. 签名过程
 
@@ -78,7 +78,7 @@ SF文件的内容和MF比较相似，同样包含了apk所有文件的摘要，�
 
 ### 1.1.3 再看CERT.RSA
 
-cert.rsa中的是二进行内容，里面保存了签名者的证书信息，以及对cert.sf文件的签名。具体证书包含的内容已经在[APK签名机制原理详解](./APK签名机制原理详解.md)中作了说明，这里不再重复介绍。
+cert.rsa中的是二进行内容，里面保存了签名者的证书信息，以及对cert.sf文件的签名。具体证书包含的内容已经在[APK签名机制原理详解](./sign_mechanism.md)中作了说明，这里不再重复介绍。
 
 ## 1.2 整体签名过程
 
@@ -646,7 +646,7 @@ private void installPackageLI(InstallArgs args, PackageInstalledInfo res) {
 
 好了，到这里签名校验的代码介绍就结束了，代码比较乱，梳理一下时序图：
 
-![jar_sign](/Users/rush/Workspace/github/zhongwenjun.github.com/blog/security/res/jar_sign.png)
+![jar_sign](./res/jar_sign.png)
 
 # 4. JAR签名机制的劣势
 
@@ -660,4 +660,4 @@ private void installPackageLI(InstallArgs args, PackageInstalledInfo res) {
 
    META-INF目录用来存放签名，自然此目录本身是不计入签名校验过程的，可以随意在这个目录中添加文件，比如一些快速批量打包方案就选择在这个目录中添加渠道文件。
 
-为了解决这两个问题，Android 7.0推出了全新的签名方案V2，关于V2签名机制的详解参见下一篇文章[V2签名机制](./apk_sign.md)
+为了解决这两个问题，Android 7.0推出了全新的签名方案V2，关于V2签名机制的详解参见下一篇文章[Apk签名机制之——V2签名机制详解](./apk_sign.md)

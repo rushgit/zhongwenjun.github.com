@@ -1,6 +1,7 @@
 # APK签名机制原理详解
 
 <br>
+
 # 前言
 
 众所周知，Android系统在安装Apk的过程中，会对Apk进行签名校验，校验通过后才能安装成功。那你知道签名校验的机制是什么？具体校验的是什么内容吗？申请第三方SDK（如微信支付）时填入的SAH1值是什么？目前众多的快速批量打包方案又是如何绕过签名检验的？
@@ -47,7 +48,7 @@
 
 这里有两个过程：签名过程 和 校验过程。
 
-![sign](/Users/rush/Documents/Work/graffle/sign/sign.png)
+![sign](./res/sign_verify.png)
 
 先来说**签名过程：**
 
@@ -98,7 +99,7 @@
 
 完整的签名和校验过程如下：（图片来源：[维基百科](https://upload.wikimedia.org/wikipedia/commons/2/2b/Digital_Signature_diagram.svg)）
 
-![2](/Users/rush/Documents/Work/graffle/sign/2.png)
+![2](./res/sign_verify_wiki.png)
 
 # 2. keystore和证书格式
 
@@ -126,11 +127,11 @@ MIICvTCCAaWgAwIBAgIEcWTElDANBgkqhkiG9w0BAQsFADAPMQ0wCwYDVQQDEwRyPQDLnVKeEIh81OwD
 -----END CERTIFICATE-----
 ```
 
-  
+ <br>
 
 **X.509证书格式：**
 
-![cert](/Users/rush/Documents/Work/graffle/sign/cert.png)
+![cert](./res/cert.png)
 
 #3. jarsigner和apksigner的区别
 
@@ -180,7 +181,6 @@ apksigner verify -v --print-certs
 
 ```
 
-<br>
 
 ok，签名的基本概念和校验过程就介绍到这里，关于JAR签名和V2签名机制的详细介绍，参考下面两篇文章：
 
