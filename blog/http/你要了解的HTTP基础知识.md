@@ -104,4 +104,4 @@ Header可以向服务器提供一些额外的信息，比如客户端希望接�
 与请求主体一样，响应主体也是可选的，接在首部的空行之后，包含了要发送给客户端的数据，可以包含任意的文本或二进制数据。
 
 <br>
-下一篇：[关于HTTPS，你需要知道的全部](./关于HTTPS，你需要知道的全部.md)
+下一篇：[关于HTTPS，你需要知道的全部](https://github.com/rushgit/zhongwenjun.github.com/blob/master/blog/http/%E5%85%B3%E4%BA%8EHTTPS%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E5%85%A8%E9%83%A8.md)
