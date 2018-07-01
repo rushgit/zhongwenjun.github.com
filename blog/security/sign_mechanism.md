@@ -137,7 +137,7 @@ MIICvTCCAaWgAwIBAgIEcWTElDANBgkqhkiG9w0BAQsFADAPMQ0wCwYDVQQDEwRyPQDLnVKeEIh81OwD
 
 Android提供了两种对Apk的签名方式，一种是基于JAR的签名方式，另一种是基于Apk的签名方式，它们的主要区别在于使用的签名文件不一样：jarsigner使用keystore文件进行签名；apksigner除了支持使用keystore文件进行签名外，还支持直接指定pem证书文件和私钥进行签名。
 
-~~~groovy
+```groovy
 android {
     signingConfigs {
         config {
@@ -149,7 +149,7 @@ android {
     }
     ...
   }
-~~~
+```
 
 不知道大家有没有注意一个问题，我们通过keytool或者AS生成一个keystore的时候（[签署您的应用](https://developer.android.com/studio/publish/app-signing)），除了要输入keystore的密码外，还要输入一个alias和key的密码。在签名时，除了要指定keystore文件和密码外，也要指定alias和key的密码，这是为什么呢？
 
