@@ -211,7 +211,7 @@ APK签名是为了保证APK的完整性和来源的真实性，分为JAR签名�
 
 <br>
 
-1. [Apk签名的基本概念和用法（本篇）](sign_mechanism.md)
+1. [Apk签名的基本概念和用法](sign_mechanism.md)
 2. [Apk签名机制之——JAR签名机制详解](./jar_sign.md)
-3. [Apk签名机制之——V2签名机制详解](./apk_sign.md)
+3. [Apk签名机制之——V2签名机制详解（本篇）](./apk_sign.md)
 
