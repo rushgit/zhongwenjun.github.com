@@ -3,7 +3,7 @@
 - Android
   - 四大组件
     - Activity启动/启动模式/Fragment设计
-    - Service启动/启动方式
+    - [Service启动/启动方式](blog/android/service.md)
     - BroadcastReceiver注册方式/优先级
     - ContentProvider安装过程
   - 进程通信
