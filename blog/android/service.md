@@ -1542,4 +1542,6 @@ Android 8.0加强了对后台服务的限制，主要是为了减少应用在后
 **更多文章：**
 
 * [关于Binder，作为应用开发者你需要知道的全部](./binder.md)
+* [关于proguard，你需要知道的全部](../security/关于proguard，你需要知道的全部.md)
+* [关于HTTPS，你需要知道的全部](../http/关于HTTPS，你需要知道的全部.md)
 * [APK签名机制原理详解](../security/sign_mechanism.md)
