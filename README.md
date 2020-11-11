@@ -1,30 +1,50 @@
 # Android技术栈
 
-- Android
+- Android基础
   - 四大组件
     - Activity启动/启动模式/Fragment设计
     - [Service启动/启动方式](blog/android/service.md)
     - BroadcastReceiver注册方式/优先级
     - ContentProvider安装过程
-  - 进程通信
-    - [Binder机制](blog/android/binder.md)
-    - AMS/PMS/WMS
-    - 进程保活/优先级
   - 线程通信
     - 消息机制：Handler/Message/MessageQueue/ThreadLocal
     - AsyncTask/HandlerThread/IntentService
   - UI
-    - View绘制原则/测量原则
+    - View绘制原则
     - 事件派发机制
     - [ListView](https://blog.csdn.net/zwjemperor/article/details/52564098)/RecyclerView缓存机制
-    - Choreographer/Vsync
+  - 动画机制
+  - 开源库
+    - 网络：Okhttp/Retrofit/Vollery
+    - 图片加载：Fresco/Glide/Picasso/ImageLoader
+    - 事件总线：EventBus
+    - 动画：Lottie
+    - 注解框架
+  - 其它
+    - JNI原理
+    - Dalvik/ART
+    - Gradle/Grovvy plugin
+    - Git使用
+- Android进阶
+  - 进程通信
+    - [Binder机制](blog/android/binder.md)
+    - AMS/PMS/WMS
+    - 进程保活/优先级
+  - 系统服务
+    - System Server
+    - AMS
+    - PMS
+    - WMS
   - 深入机制
-    - App安装流程
     - App启动流程
     - App打包流程
     - 动态加载机制
     - 资源加载机制
     - SO加载机制 
+  - UI
+    - Choreographer/Vsync
+    - Window/ViewRootImpl
+    - RemoteViews
   - 性能优化
     - 内存泄露、内存优化
     - 启动速度优化
@@ -33,34 +53,22 @@
     - 性能监控
     - [APK瘦身](https://blog.csdn.net/zwjemperor/article/details/52541264)
   - 容器化
-    - 模块化
-    - 插件化
+    - 模块/组件化
+    - 动态化
       - 类加载机制/multidex
       - 四大组件启动过程
       - [InstantRun原理](https://github.com/rushgit/InstantRun)
     - hybrid
-      - ReactNative/Weex
+      - ReactNative/Weex/Flutter
       - 免安装
   - 热修复
     - hook系
     - ClassLoader系
-  - 开源库
-    - 网络：Okhttp/Retrofit/Vollery
-    - 图片加载：Fresco/Glide/Picasso/ImageLoader
-    - 事件总线：EventBus
-    - 动画：Lottie
   - 安全
     - [数字签名/加密算法](blog/security/sign_mechanism.md)
     - 安全编码
     - [混淆](blog/security/关于proguard，你需要知道的全部.md)
     - 反编译/加固
-  - Android版本新特性
-    - [Android N分屏适配](https://blog.csdn.net/zwjemperor/article/details/52337106)
-  - 其它
-    - JNI原理
-    - Dalvik/ART
-    - Gradle/Grovvy plugin
-    - Git使用
 - Java
   - 语言
     - 泛型
@@ -93,7 +101,7 @@
     - 事务
     - 索引
     - 升级/降级
-  - 算法
+  - 数据结构与算法
     - 数据结构：链表/二叉树/红黑树
     - 思想：动态规划/分治/回溯/贪心
     - 排序/查找
